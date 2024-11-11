@@ -102,7 +102,8 @@ public class PauseMenuManager : MonoBehaviour
 
     void ViewControls()
     {
-        ControlsMenuManager.instance.DisplayControlsMenu();
+        // ControlsMenuManager.instance.DisplayControlsMenu();
+        UIManager.instance.DisplayControlsMenu();
         pauseMenu.SetActive(false);
     }
 

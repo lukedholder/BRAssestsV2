@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ControlsMenuManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
+    public static UIManager instance; // global instance
     private static GameObject controlsMenu;
-    public static ControlsMenuManager instance; // global instance
     public Button returnButton;
     [SerializeField] private GameObject adminCtrls;
     public GameObject menuToReturnTo;
+
 
     void OnEnable()
     {
@@ -47,8 +48,7 @@ public class ControlsMenuManager : MonoBehaviour
             // user is playing game, in pause menu
             // controls menu should go back to pause menu
             menuToReturnTo = GameObject.Find("PauseMenu");
-            PauseMenuManager.instance.Resume();
-            //menuToReturnToBool = true;
+            //  PauseMenuManager.Resume();
         } else
         {
             // user is not playing game, in main menu
