@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Profiling;
 
-//hello
+//Kelly's version
 
 
 public class GameManager : MonoBehaviour
